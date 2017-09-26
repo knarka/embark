@@ -19,7 +19,8 @@ function moor --description 'add a harbors to later embark to'
 	else
 		set -l harbor (string join '/' $harbors $argv[1])
 		if not test -e $harbor
-			ln -s pwd $harbor
+			ln -s $PWD $harbor
+			echo 'Aye aye!'
 		else
 			echo 'That name is already in use!'
 			return

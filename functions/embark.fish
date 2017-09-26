@@ -10,7 +10,7 @@ function embark --description 'embark to a known harbor'
 
 	set -l harbor (string join '/' $harbors $argv[1])
 	if not test -e $harbor
-		echo "No such harbor! Can't remove it then."
+		echo "Ye can't sail to a harbor that doesn't exist, matey."
 		return
 	end
 
