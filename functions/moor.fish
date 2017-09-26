@@ -12,17 +12,18 @@ function moor --description 'add a harbors to later embark to'
 		if test (count $argv) -lt 2; echo $usage; return; end
 		set -l harbor (string join '/' $harbors $argv[2])
 		if not test -e $harbor
-			echo "No such harbor! Can't remove it then."
+			echo "Thar ain't be such a harbor"
 			return
 		end
 		rm $harbor
+		echo 'Aye aye!'
 	else
 		set -l harbor (string join '/' $harbors $argv[1])
 		if not test -e $harbor
 			ln -s $PWD $harbor
 			echo 'Aye aye!'
 		else
-			echo 'That name is already in use!'
+			echo 'Thar already be a harbor with that name.'
 			return
 		end
 	end
