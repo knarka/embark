@@ -2,13 +2,13 @@
 Ahoy! Embark be a piratical bookmarks plugin for the fish shell.
 
 ## Installation
-### With [fisherman](https://github.com/fisherman/fisherman)
-Thar's an easy way: `fisher knarka/embark`. And avast!
+### With [fisher](https://github.com/jorgebucaran/fisher)
+Thar's an easy way: `fisher add knarka/embark`. And avast!
 
 ## Usage
-* `moor a` remembers the current place of yer vessle, so ye can set sail to it later.
-* `moor -d b` gets rid of that scurvy harbor b.
-* `embark a` sets sail to that good ol' harbor a.
+* `moor a` sets a bookmark with the name a
+* `moor -d b` removes a bookmark named b
+* `embark a` sets sail to bookmark a
 
 ## License
 See LICENSE

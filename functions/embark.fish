@@ -1,18 +1,18 @@
-function embark --description 'embark to a known harbor'
-	set -l harbors (string join '' $HOME '/.config/fisherman/embark/harbors')
-	set -l usage "Usage: embark <a> - set sail to harbor 'a'"
+function embark --description 'go to a bookmark'
+	set -l bookmarks (string join '' $HOME '/.config/fisher/github.com/knarka/embark/bookmarks')
+	set -l usage "Usage: embark <a> - go to bookmark 'a'"
 
-	if not test -e $harbors
-		mkdir $harbors
+	if not test -e $bookmarks
+		mkdir $bookmarks
 	end
 
 	if test -z $argv[1]; echo $usage; return; end
 
-	set -l harbor (string join '/' $harbors $argv[1])
-	if not test -e $harbor
-		echo "Ye can't sail to a harbor that don't be existin'."
+	set -l bookmark (string join '/' $bookmarks $argv[1])
+	if not test -e $bookmark
+		echo "No such bookmark"
 		return
 	end
 
-	cd $harbor
+	cd $bookmark
 end
